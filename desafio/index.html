@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thierry Vinicius de Souza Farias</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientMove 18s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 15px;
+      color: #f0f4f8;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: #fff;
+      max-width: 900px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.25),
+        0 6px 20px rgba(32, 83, 146, 0.3);
+      padding: 50px 60px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: -100px; left: -100px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, #2a5298, transparent 70%);
+      filter: blur(80px);
+      animation: glowMove 10s linear infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes glowMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(60px, 60px); }
+    }
+
+    h1 {
+      color: #203a43;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-image {
+      display: block;
+      margin: 0 auto 40px auto;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 7px solid #2a5298;
+      box-shadow: 0 12px 30px rgba(42, 82, 152, 0.8);
+      transition: transform 0.4s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-image:hover {
+      transform: scale(1.08) rotate(3deg);
+      box-shadow: 0 20px 40px rgba(42, 82, 152, 1);
+    }
+
+    .contact-button {
+      text-align: center;
+      margin-top: 40px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .contact-button a {
+      display: inline-block;
+      padding: 15px 35px;
+      background: linear-gradient(135deg, #2a5298, #1e3c72);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(42,82,152,0.7);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .contact-button a:hover {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      transform: scale(1.05);
+    }
+
+    section {
+      margin-bottom: 45px;
+      background-color: #f9faff;
+      border-left: 10px solid #2a5298;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(42, 82, 152, 0.1);
+      color: #203a43;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+      transition: box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 10px 35px rgba(42, 82, 152, 0.3);
+      background-color: #e3efff;
+    }
+
+    section h2 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      font-size: 1.8rem;
+      border-bottom: 3px solid #2a5298;
+      padding-bottom: 6px;
+    }
+
+    ul {
+      padding-left: 26px;
+      list-style-type: disc;
+      color: #203a43;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        padding: 35px 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+      }
+
+      .profile-image {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 30px;
+      }
+
+      section {
+        font-size: 1rem;
+        margin-bottom: 35px;
+        padding: 20px 20px;
+        border-left-width: 6px;
+      }
+
+      section h2 {
+        font-size: 1.4rem;
+        border-bottom-width: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Apresentação de Thierry Vinicius de Souza Farias">
+    <h1>Thierry Vinicius de Souza Farias</h1>
+
+    <img src="./360_F_669608225_WAaQj6rlwJyyNNLdVhCnTA0p4N2crde8.jpg" alt="Foto de Thierry Vinicius de Souza Farias" class="profile-image" loading="lazy" />
+
+    <section aria-labelledby="bio-title">
+      <h2 id="bio-title">Biografia</h2>
+      <p>Me chamo Thierry, tenho 16 anos e sou estudante no SESI. Também estou cursando o técnico em Desenvolvimento de Sistemas no SENAI. Sou dedicado e com vontade de aprender e crescer na área da tecnologia. Nasci em 25 de outubro de 2008 e estou constantemente buscando evolução pessoal e profissional.</p>
+    </section>
+
+    <section aria-labelledby="skills-title">
+      <h2 id="skills-title">Habilidades</h2>
+      <ul>
+        <li>Comunicação clara e eficaz</li>
+        <li>Facilidade para trabalhar em equipe</li>
+        <li>Adaptação rápida a novos ambientes e desafios</li>
+        <li>Aprendizado ágil de novas tecnologias e ferramentas</li>
+        <li>Interesse constante por inovação e desenvolvimento pessoal</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="characteristics-title">
+      <h2 id="characteristics-title">Características</h2>
+      <p>Sou moreno, tenho cabelo cacheado de comprimento médio. Me considero proativo, observador, curioso e responsável. Gosto de colaborar, ajudar os outros e buscar sempre o melhor resultado possível.</p>
+    </section>
+
+    <section aria-labelledby="experience-title">
+      <h2 id="experience-title">Experiências e Cursos</h2>
+      <p>Curso técnico em Desenvolvimento de Sistemas - SENAI.</p>
+    </section>
+
+    <!-- Botão no final -->
+    <div class="contact-button">
+      <a href="contato.html">Entre em Contato</a>
+    </div>
+
+  </div>
+</body>
+</html>
